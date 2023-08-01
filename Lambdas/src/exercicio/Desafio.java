@@ -38,7 +38,7 @@ public class Desafio {
 		Function<Double, String> arredondar = (valor) -> {
 			DecimalFormat df = new DecimalFormat("#.00");
 			return df.format(valor);
-		};
+		};  
 
 		UnaryOperator<String> formatar = (valor) -> {
 			return ("R$" + valor).replace(".", ",");

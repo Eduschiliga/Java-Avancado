@@ -19,6 +19,6 @@ public class Reduce1 {
 		System.out.println(total2);
 
 		// Resultado foi um Opcional<Integer>...
-		nums.stream().filter(n -> n > 5).reduce(soma).ifPresent(System.out::println);
+		nums.stream().filter(n -> n > 5).reduce(soma).ifPresentOrElse(System.out::println, null);
 	}
 }

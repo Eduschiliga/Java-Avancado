@@ -3,7 +3,6 @@ package minMax;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Predicate;
 
 import filter.Aluno;
 
@@ -17,8 +16,17 @@ public class MinMax {
 
 		List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5);
 
-		Comparator<Aluno> melhorNota = (a1, a2) -> {
-			if(a1.getNota() > a2.getNota()) return 1;
+		Comparator<Aluno> melhorNota = (aluno1, aluno2) -> {
+			if (aluno1.getNota() > aluno2.getNota()) {
+				return 1;
+			}
+			if (aluno1.getNota() < aluno2.getNota()) {
+				return -1;
+			}
+			return 0;
 		};
+		
+		System.out.println("Melhor nota\n" + alunos.stream().max(melhorNota).get());
+		System.out.println("\nPior nota\n" + alunos.stream().min(melhorNota).get());
 	}
 }

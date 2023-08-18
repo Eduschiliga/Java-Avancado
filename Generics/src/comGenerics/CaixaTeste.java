@@ -1,4 +1,4 @@
-package exemplo.comgenerics;
+package comGenerics;
 
 /**
  *

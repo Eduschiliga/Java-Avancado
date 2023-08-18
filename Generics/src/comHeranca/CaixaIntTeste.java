@@ -2,22 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package exemplo.semgenerics;
+package comHeranca;
 
 /**
  *
  * @author Eduardo
  */
-public class CaixaObjeto {
-	private Object coisa;
+public class CaixaIntTeste {
 
-	public void guardar(Object coisa) {
-		this.coisa = coisa;	
+	public static void main(String[] args) {
+		CaixaInt caixaA = new CaixaInt();
+
+		caixaA.guardar(123);
+		Integer coisaA = caixaA.abrir();
+
+		System.out.println(coisaA);
 	}
 
-	public Object abrir() {
-		return coisa;
-	}
-
-	
 }
